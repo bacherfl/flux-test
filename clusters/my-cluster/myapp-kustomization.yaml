@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn: 
-    - name: myapp-deployment
+    - name: podinfo
   interval: 5m0s
   path: ./config
   prune: true
@@ -23,6 +23,7 @@ metadata:
 spec:
   dependsOn: 
     - name: myapp-config
+    - name: podinfo
   interval: 5m0s
   path: ./deployment
   prune: true
