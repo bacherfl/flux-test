@@ -5,6 +5,7 @@ metadata:
   name: myapp-config
   namespace: flux-system
 spec:
+  suspend: true
   dependsOn: 
     - name: myapp-deployment
   interval: 5m0s
@@ -21,6 +22,7 @@ metadata:
   name: myapp-deployment
   namespace: flux-system
 spec:
+  suspend: true
   dependsOn: 
     - name: myapp-config
   interval: 5m0s
