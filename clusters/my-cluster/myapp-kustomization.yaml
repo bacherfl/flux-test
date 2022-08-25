@@ -5,6 +5,8 @@ metadata:
   name: myapp-config
   namespace: flux-system
 spec:
+  dependsOn: 
+    - name: myapp-deployment
   interval: 5m0s
   path: ./config
   prune: true
